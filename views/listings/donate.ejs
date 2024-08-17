@@ -1,0 +1,66 @@
+<%- include("../includes/navbar") %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Razorpay</title>
+  <!-- <link rel='stylesheet' href='css/boilerplate.css' /> -->
+  <link rel="stylesheet" href="css/gateway.css">
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    /* background-image: url('5.png'); */
+    background-color: #CCBCD4;
+  }
+  .donation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    position: relative;
+    bottom: 15%;
+  }
+  #ngo-logo {
+    position: relative;
+    top: 90px;
+    width: 400px; /* Adjust as needed */
+    height: auto;
+    margin-bottom: 140px;
+  }
+  #donate-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+ 
+  .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+</style>
+<body>
+
+  <div class="donation-container">
+    <img id="ngo-logo" src="../images/logo.png" alt="NGO Logo">
+    <p style="position: relative;bottom: 100px;">We proudly support <strong>Smile Foundation</strong> in their noble cause.</p>
+    <button style="position: relative;bottom: 100px;" id="donate-btn" class="rzp-button1">Donate Now</button>
+  </div>
+
+  <div class="footer">
+    <p>Contact us at: example@example.com</p>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="javascript/donate.js"></script>
+</body>
+</html>
